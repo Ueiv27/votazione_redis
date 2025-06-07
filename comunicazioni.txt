@@ -1,0 +1,46 @@
+#### 07/06
+    repository creata, vediamo come andrà... -Mauro
+
+    questo è quello che ho scritto mentre il prof spiegava il progetto. se avete qualcosa da aggiungere modificate pure:
+
+        per gestire la votazione, per ogni proposta registra una chiave all'interno della quale inserisci un set con gli utenti.
+        in questo modo, nessuno potrà votare la stessa proposta più di una volta
+
+        lo scopo del gioco è fare un sistema di proposte e votazione proposte, con tanto di visualizzazione elenco proposte in ordine di popolarità.
+        tutto quanto deve essere accessibile da linea di comando.
+        esempio: inserisci la tua proposta -> input caffe gratis -> vota la proposta -> input 3
+        si piò votare una proposta una sola volta
+
+        partiamo da pensare come l'utente guarderà il programma
+
+        facciamo massimo 3 voti a persona oppure 3 punti da distribuire tra le scelte?
+            -> alla fine ho deciso per 3 voti max, 1 voto per proposta
+        ____________________________________________________________________
+        avviamo il programma->
+
+            print programma per votazione, autenticazione
+                che corso frequenti -> qual è il tuo numero dell'elenco (oppure mapping/hash)?
+
+            menu intermedio
+                1 per votare
+                2 per proporre
+                3 per vedere classifica proposte
+                e per uscire
+                    chiudi programma
+
+            1
+                print elenco numerato proposte
+                input numero proposta
+                    attenzione a non permettere voti doppi alla stessa proposta
+                    max 3 voti
+
+            2
+                print elenco proposte
+                input nuova proposta
+                    numero ++
+
+            3
+                print ranking proposte
+
+    Criticità: 
+        l'autenticazione è molto finta. si può scrivere qualsiasi cosa e il programma creerebbe semplicemente un nuovo utente.

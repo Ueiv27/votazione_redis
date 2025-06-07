@@ -1,7 +1,7 @@
 # Premessa:
-Prova per familiarizzare con github. Si tratta di un semplice script python che gestisce un piccolo server redis. Ho lasciato di proposito tutte le informazioni "private" per accedervi per comodità.
+Prova per familiarizzare con github. Si tratta di un semplice script python che gestisce un piccolo server redis. Per comodità, **ho lasciato di proposito tutte le informazioni "private" per accedervi.**
 
-Sappiate che se usatele mie credenziali, tutti i cambiamenti avverranno sul mio cloud server redis, perciò se volete giocarci e fare casino, mettete le vostre.
+Sappiate che se userete le mie credenziali, tutti i cambiamenti avverranno sul mio cloud server redis, e non potrete vederli con redis insight ma solo facendo richieste al server tramite codice. Perciò se volete giocarci e fare casino, mettete le vostre.
 
 
 # Sistema di Votazione NoSQL con Redis

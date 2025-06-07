@@ -33,7 +33,7 @@ Questo progetto implementa un semplice sistema di votazione per proposte utilizz
 1.  **Clona il repository:**
 
     ```bash
-    git clone [https://github.com/Ueiv27/votazione_redis.git](https://github.com/Ueiv27/votazione_redis.git)
+    git clone https://github.com/Ueiv27/votazione_redis.git
     cd votazione_redis
     ```
 2.  **Configura le credenziali di Redis:**

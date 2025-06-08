@@ -1,12 +1,7 @@
 import redis as r
 import sys
+from config_redis import username, password, host, port
 
-# --- CONFIGURAZIONE ---
-# !!! INSERISCI QUI LE TUE CREDENZIALI, DEVONO ESSERE UGUALI A QUELLE DELLO SCRIPT PRINCIPALE !!!
-username = "default"
-password = "O9uv1t8Sxp93vkDYnnHX6NOhN953ZlZw"
-host = 'redis-15081.crce198.eu-central-1-3.ec2.redns.redis-cloud.com'
-port = 15081
 
 try:
     # Usiamo decode_responses=True per non dover convertire manualmente i valori da bytes a stringhe

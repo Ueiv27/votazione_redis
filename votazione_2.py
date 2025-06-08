@@ -1,12 +1,7 @@
 import redis as r
 import sys
+from config_redis import username, password, host, port
 
-# --- CONFIGURAZIONE ---
-# Inserisci qui le tue credenziali
-username = "default"
-password = "O9uv1t8Sxp93vkDYnnHX6NOhN953ZlZw"
-host = 'redis-15081.crce198.eu-central-1-3.ec2.redns.redis-cloud.com'
-port = 15081
 
 try:
     red = r.Redis(

@@ -25,14 +25,20 @@ def mostra_voti_utenti():
     for user, count in voti.items():
         print(f"- {user}: {count} voti")
 
-def mostra_votanti_per_proposta():
-    print("\n📥 Votanti per proposta:")
-    proposte = red.hkeys("proposals")
-    for pid in proposte:
-        votanti = red.smembers(f"proposal:votes:{pid}")
-        print(f"- Proposta {pid}: {len(votanti)} votanti")
+def mostra_utenti_per_proposta():
+    print("\n👥 Utenti che hanno votato ogni proposta:")
+    proposte = red.hgetall("proposals")
+    if not proposte:
+        print("Nessuna proposta trovata.")
+        return
+    for pid, nome in proposte.items():
+        utenti = red.smembers(f"proposal:votes:{pid}")
+        if utenti:
+            print(f"- Proposta {pid} ('{nome}') votata da: {', '.join(utenti)}")
+        else:
+            print(f"- Proposta {pid} ('{nome}') non ha ancora ricevuto voti.")
 
 if __name__ == "__main__":
     mostra_classifica()
     mostra_voti_utenti()
-    mostra_votanti_per_proposta()
+    mostra_utenti_per_proposta()

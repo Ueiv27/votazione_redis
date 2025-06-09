@@ -33,8 +33,12 @@ def key_proposal_votes_set(proposal_id):
 # --- FUNZIONI PRINCIPALI ---
 
 def get_user_id():
-    corso = input("Che corso frequenti? ")
-    numero = input("Qual è il tuo numero dell'elenco? ")
+    corso = input("Che corso frequenti? (BD, ML) ")
+    while True:
+        numero = input("Qual è il tuo numero dell'elenco? ")
+        if numero.isdigit() and 1 <= int(numero) <= 30:
+            break
+        print("Le classi sono composte da massimo 30 persone, inserisci un numero valido. ")
     return f"{corso.strip().lower()}:{numero.strip()}"
 
 def menu():
@@ -42,6 +46,7 @@ def menu():
     print("1. Votare una proposta")
     print("2. Inserire una nuova proposta")
     print("3. Vedere la classifica delle proposte")
+    print("4. Analizzare i voti di un corso") 
     print("e. Esci")
     return input("Scegli un'opzione: ").strip().lower()
 
@@ -132,6 +137,38 @@ def classifica():
         voti = int(score)
         print(f"{i}. {nome} - {voti} voti")
 
+
+def conta_voti_per_corso(nome_corso):
+    """
+    Conta il totale dei voti espressi da tutti gli studenti di un corso specifico.
+    """
+    print(f"\n--- Analisi Voti per il Corso '{nome_corso}' ---")
+    
+    # 1. Recupera l'intero hash con tutti gli utenti e i loro conteggi di voti
+    utenti_e_voti = red.hgetall(KEY_USER_VOTES_HASH) 
+    
+    if not utenti_e_voti:
+        print("Nessun voto è stato ancora registrato.")
+        return
+
+    voti_totali_corso = 0
+    utenti_del_corso_votanti = 0
+    prefisso_corso = f"{nome_corso.strip().lower()}:" 
+
+    # 2. Itera sul dizionario in Python
+    for user_id, num_voti in utenti_e_voti.items():
+        # 3. Controlla se l'ID utente inizia con il prefisso del corso desiderato
+        if user_id.startswith(prefisso_corso):
+            voti_totali_corso += int(num_voti)
+            utenti_del_corso_votanti += 1
+
+    if utenti_del_corso_votanti > 0:
+        print(f"Trovati {utenti_del_corso_votanti} studenti votanti per questo corso.")
+        print(f"Hanno espresso un totale di {voti_totali_corso} voti.")
+    else:
+        print(f"Nessuno studente del corso '{nome_corso}' ha ancora votato.")
+
+
 def main():
     print("Benvenuto nel sistema di votazione NoSQL!")
     user_id = get_user_id()
@@ -145,6 +182,12 @@ def main():
             proponi_proposta()
         elif scelta == "3":
             classifica()
+        elif scelta == "4":
+            corso_da_cercare = input("Di quale corso vuoi analizzare i voti? ")
+            if corso_da_cercare.strip(): # Controlla che l'utente abbia scritto qualcosa
+                conta_voti_per_corso(corso_da_cercare)
+            else:
+                print("Errore: Devi inserire un nome per il corso.")
         elif scelta == "e":
             print("Arrivederci!")
             sys.exit(0)

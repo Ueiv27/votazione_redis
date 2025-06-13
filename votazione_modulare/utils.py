@@ -1,4 +1,3 @@
-# utils.py
 def key_user_password(user_id):
     return f"user:{user_id}:password"
 

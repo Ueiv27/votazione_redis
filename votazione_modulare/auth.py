@@ -1,4 +1,3 @@
-# auth.py
 import redis
 import bcrypt
 from config_redis import username, password, host, port

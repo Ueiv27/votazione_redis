@@ -1,4 +1,3 @@
-# main.py
 from auth import login_utente, registra_utente
 from logic import menu, vota_proposta, proponi_proposta, classifica, conta_voti_per_corso
 

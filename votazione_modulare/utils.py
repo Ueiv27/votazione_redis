@@ -10,9 +10,6 @@ def key_proposal_text(proposal_id):
 def key_proposal_votes_set(proposal_id):
     return f"proposal:{proposal_id}:votes"
 
-def key_proposal_score(proposal_id):
-    return f"proposal:{proposal_id}:score"
-
 def get_user_id():
     corso = input("Che corso frequenti? (BD, ML) ")
     while True:

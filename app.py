@@ -1,4 +1,4 @@
-#### per farla funzionare digita: streamlit run votazione_modulare\app.py
+#### per farla funzionare digita: streamlit run app.py
 
 import streamlit as st
 import redis

@@ -1,6 +1,4 @@
-# config_redis.py
-
-# --- CONFIGURAZIONE ---
+## --- CONFIGURAZIONE ---
 # !!! INSERISCI QUI LE TUE CREDENZIALI
 username = "default" 
 password = "O9uv1t8Sxp93vkDYnnHX6NOhN953ZlZw"  

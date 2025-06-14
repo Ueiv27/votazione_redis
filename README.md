@@ -4,8 +4,8 @@ Un sistema completo per votare proposte studentesche utilizzando Redis come data
 
 ## 🎯 Cos'è questo progetto?
 
-Questo è un sistema di votazione democratica per studenti universitari che permette di:
-- **Proporre** nuove idee per migliorare la vita universitaria
+Questo è un sistema di votazione democratica per studenti ITS che permette di:
+- **Proporre** nuove idee per migliorare la vita in ITS
 - **Votare** le proposte degli altri studenti (massimo 3 voti per persona)
 - **Vedere** una classifica in tempo reale delle proposte più votate
 - **Autenticarsi** in modo sicuro con password criptate
@@ -80,7 +80,7 @@ Interfaccia testuale con le stesse funzionalità ma più spartana.
 ## 👥 Come registrarsi
 
 Il sistema usa un formato specifico per gli utenti:
-- **Corso**: `BD` (Basi di Dati) o `ML` (Machine Learning)
+- **Corso**: `BD` (Big Data) o `ML` (Machine Learning)
 - **Numero**: Il tuo numero nell'elenco della classe (1-30)
 - **Password**: Almeno 4 caratteri (verrà criptata automaticamente)
 
@@ -197,6 +197,6 @@ Se hai problemi:
 **Grazie**
 
 ---
-Mauro [Ueiv27] Panzanaro
-Luca [Gay] Conte
-Michelangelo [Chimpmunk] Suarez
+- Mauro [Ueiv27] Panzanaro
+- Luca [Gay] Conte
+- Michelangelo [Chimpmunk] Suarez

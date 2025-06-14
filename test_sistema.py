@@ -191,12 +191,8 @@ class TestIntegrazioneSistema(unittest.TestCase):
     """Test di integrazione per verificare il funzionamento dell'intero sistema"""
     
     def setUp(self):
-        self.red = redis.Redis(
-            host=host, port=port, db=0,
-            username=username, password=password,
-            decode_responses=True
-        )
-
+        self.red = red
+        
     def test_connessione_redis(self):
         """Test connessione al database Redis"""
         try:

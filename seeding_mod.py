@@ -4,10 +4,9 @@ Script per pulire il database Redis e fare seeding iniziale
 Esegui con: python cleanup_and_seed.py
 """
 
-import redis
 import bcrypt
 import random
-from config_redis import username, password, host, port
+from config_redis import red
 from utils import (
     key_proposal_text, 
     key_user_password, key_user_votes, key_proposal_votes_set
@@ -15,15 +14,6 @@ from utils import (
 
 def main():
     # Connessione Redis
-    red = redis.Redis(
-        host=host,
-        port=port,
-        db=0,
-        username=username,
-        password=password,
-        decode_responses=True
-    )
-    
     print("🧹 Pulizia database Redis...")
     
     # Cancella tutto il database

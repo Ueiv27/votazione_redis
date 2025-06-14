@@ -1,29 +1,13 @@
 #### per farla funzionare digita: streamlit run app.py
 
 import streamlit as st
-import redis
 import bcrypt
-from config_redis import username, password, host, port
+from config_redis import red
 from utils import (
     get_user_id, key_user_password, key_user_votes,
     key_proposal_text, key_proposal_votes_set
 )
 from leaderboard import get_classifica, aggiorna_classifica, inizializza_proposta_in_classifica
-
-# --- Connessione Redis ---
-# È buona pratica avere una sola istanza di connessione
-@st.cache_resource
-def get_redis_connection():
-    return redis.Redis(
-        host=host,
-        port=port,
-        db=0,
-        username=username,
-        password=password,
-        decode_responses=True
-    )
-
-red = get_redis_connection()
 
 MAX_VOTI = 3
 

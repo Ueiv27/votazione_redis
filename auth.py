@@ -1,16 +1,6 @@
-import redis
 import bcrypt
-from config_redis import username, password, host, port
+from config_redis import red
 from utils import get_user_id, key_user_password
-
-red = redis.Redis(
-    host=host,
-    port=port,
-    db=0,
-    username=username,
-    password=password,
-    decode_responses=True
-)
 
 def registra_utente():
     user_id = get_user_id()

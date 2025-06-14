@@ -7,7 +7,7 @@ Testa l'integrazione tra tutti i moduli principali
 import unittest
 import redis
 import bcrypt
-from config_redis import username, password, host, port
+from config_redis import red
 from utils import (
     key_user_password, key_user_votes, 
     key_proposal_text, key_proposal_votes_set
@@ -21,14 +21,7 @@ class TestSistemaVotazione(unittest.TestCase):
     
     def setUp(self):
         """Inizializza ambiente di test"""
-        self.red = redis.Redis(
-            host=host,
-            port=port,
-            db=0,
-            username=username,
-            password=password,
-            decode_responses=True
-        )
+        self.red = red
         
         # Dati di test
         self.test_user = "test:99"

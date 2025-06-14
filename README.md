@@ -21,14 +21,15 @@ Questo è un sistema di votazione democratica per studenti universitari che perm
 1. **Scarica il progetto**
    ```bash
    # Se hai git installato:
-   git clone <url-del-tuo-repository>
+   git clone https://github.com/Ueiv27/votazione_redis.git
    
    # Oppure scarica lo ZIP e estrailo
    ```
 
 2. **Vai nella cartella del progetto**
    ```bash
-   cd sistema-votazione
+   cd votazione_redis   
+
    ```
 
 3. **Installa le dipendenze**
@@ -112,7 +113,6 @@ Il sistema usa un formato specifico per gli utenti:
 ### 📈 Classifica Dinamica
 - Aggiornamento in tempo reale
 - Ordinamento automatico per numero di voti
-- Visualizzazione accattivante con emoji per i primi posti
 
 ### 🔐 Sicurezza
 - Password criptate con bcrypt (salt unico per ogni utente)
@@ -136,6 +136,7 @@ Il sistema usa un formato specifico per gli utenti:
 3. "Introdurre corsi di programmazione pratica con progetti reali"
 4. "Organizzare workshop su intelligenza artificiale e machine learning"
 5. "Istituire un servizio di tutoraggio peer-to-peer gratuito"
+6. "Cacciare Luca Conte"
 
 ## ⚠️ Risoluzione problemi comuni
 
@@ -173,7 +174,6 @@ Questo progetto dimostra:
 - **Redis**: Database NoSQL in cloud
 - **Streamlit**: Framework per interfacce web
 - **bcrypt**: Crittografia password
-- **HTML/CSS**: Styling interfaccia web
 
 ## 🤝 Supporto
 
@@ -194,4 +194,9 @@ Se hai problemi:
 
 ---
 
-**Buona votazione! 🗳️**
+**Grazie**
+
+---
+Mauro [Ueiv27] Panzanaro
+Luca [Gay] Conte
+Michelangelo [Chimpmunk] Suarez

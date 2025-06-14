@@ -1,3 +1,14 @@
+# Sistema di Votazione Studentesca
+# Dipendenze Python necessarie per il funzionamento
+
+# Database Redis
 redis==5.0.4
+
+# Crittografia password
 bcrypt==4.1.2
-streamlit
+
+# Interfaccia web
+streamlit==1.28.1
+
+# Testing (opzionale, per sviluppatori)
+# unittest è incluso in Python standard library
